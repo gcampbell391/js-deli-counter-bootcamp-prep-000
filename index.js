@@ -1,29 +1,9 @@
-function takeANumber(currentLine, personName){
-  currentLine.push(personName);
-  var numInLine = parseInt(currentLine.indexOf(personName)) + 1;
-  return `Welcome, ${personName}. You are number ${numInLine} in line.`
-}
+var numInLine = 0;
 
-function nowServing(katzDeliLine){
-  if(katzDeliLine.length !== 0){
-    var nextUp = katzDeliLine[0];
-    katzDeliLine.shift();
-    return `Currently serving ${nextUp}.`;
-  }
-  else{ 
-    return 'There is nobody waiting to be served!' 
-  }
-}
+function takeANumber(currentLine){
 
-function currentLine(katzDeliLine){
-  var line = [];
-  for(var i = 0;i < katzDeliLine.length; i++) {
-    line.push(` `+[i + 1]+`. `  + katzDeliLine[i])
-  }
-  if (katzDeliLine.length === 0) {
-    return "The line is currently empty.";
-  } 
-  else{
-       return(`The line is currently:` + line);
-  }
+  var NumInLine2 = numInLine + 1
+  currentLine.push(NumInLine2);
+  
+  console.log(`Welcome,you are ${NumInLine2}.`)
 }
